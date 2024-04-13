@@ -130,11 +130,13 @@
     <ClInclude Include="cCentrodeTesteo.h" />
     <ClInclude Include="cLab.h" />
     <ClInclude Include="cPaciente.h" />
+    <ClInclude Include="Headers.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cCentrodeTesteo.cpp" />
     <ClCompile Include="cLab.cpp" />
     <ClCompile Include="cPaciente.cpp" />
+    <ClCompile Include="enumTestResult.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

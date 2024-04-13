@@ -1,5 +1,6 @@
 #pragma once
-#include <string>
+#include "Headers.h"
+#include "cPaciente.h"
 
 class cLab
 {
@@ -12,9 +13,13 @@ private:
 	cPaciente* ptrPac;
 
 public:
-	//DEFINIR QUE RECIBEN Y QUE DEVUELVEN
+	//DEFINIR QUE RECIBEN Y QUE DEVUELVEN: implementar 
 	void recibirMuestra();
-	void muestraAnalis(); //ambas reciben ptrPac
-	void avisarPac(); // 
+	void muestraAnalisis(); //ambas reciben ptrPac
+	void avisarPac(); // =
+
+	string getLabID();
+	void setLabID(string labID);
+
 };
 
