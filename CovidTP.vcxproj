@@ -130,6 +130,7 @@
     <ClInclude Include="cCentrodeTesteo.h" />
     <ClInclude Include="cLab.h" />
     <ClInclude Include="cPaciente.h" />
+    <ClInclude Include="enumResultadoTesteo.h" />
     <ClInclude Include="Headers.h" />
   </ItemGroup>
   <ItemGroup>
