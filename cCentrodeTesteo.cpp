@@ -1,6 +1,6 @@
 #include "cCentrodeTesteo.h"
 
-cCentrodeTesteo::cCentrodeTesteo(const string CenterID, int ComunaTC, string NameTC):centerID(CenterID)
+cCentrodeTesteo::cCentrodeTesteo(string CenterID, int ComunaTC, string NameTC): centerID(CenterID)
 {
 	comunaTC = ComunaTC;
 	nameTC = NameTC;
@@ -44,7 +44,7 @@ void cCentrodeTesteo::altaPac(cPaciente* pacX)
 	sobrecarga operator +   */
 }
 
-bool cCentrodeTesteo::sendTest()//no recibe nada, simplemente le pasa el paciente que llego que tiene guardado internamente al lab
+void cCentrodeTesteo::sendTest()//no recibe nada, simplemente le pasa el paciente que llego que tiene guardado internamente al lab
 {
 	ptrLab->recibirMuestra(ptrPaciente);
 }
