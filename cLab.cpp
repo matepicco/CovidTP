@@ -25,15 +25,15 @@ void cLab::muestraAnalisis()
 	int contSintomas = 0;
 	if (ptrPac->getContEstrecho() == true)
 		contSintomas++;
-	else if (ptrPac->getFiebre() == true)
+	if (ptrPac->getFiebre() == true)
 		contSintomas++;
-	else if (ptrPac->getHeadhache() == true)
+	if (ptrPac->getHeadhache() == true)
 		contSintomas++;
-	else if (ptrPac->getMocos() == true)
+	if (ptrPac->getMocos() == true)
 		contSintomas++;
-	else if (ptrPac->getSorethroat() == true)
+	if (ptrPac->getSorethroat() == true)
 		contSintomas++;
-	else if (ptrPac->getTos() == true)
+	if (ptrPac->getTos() == true)
 		contSintomas++;
 
 	if (contSintomas >= 2)
@@ -44,10 +44,16 @@ void cLab::muestraAnalisis()
 		this->ptrPac->set_resultado(SinResultado);
 	//podria haber alguna especie de throw aca nose
 
+	//mensaje al paciente sobre resultado
+	avisarPac();
 }
 
 void cLab::avisarPac()
 {
+	if (ptrPac->getTestResult() == 0)
+		cout << "El resultado de su test es positivo!";
+	else
+		cout << "El resultado de su test es negativo!";
 }
 
 void cLab::disponibilidad()

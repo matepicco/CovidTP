@@ -21,7 +21,7 @@ public:
 
 	void recibirMuestra(cPaciente* cPac);//recibe al paciente y asi modificar su resultado
 	void muestraAnalisis(); //ambas reciben ptrPac
-	void avisarPac(); // =
+	void avisarPac();
 	void disponibilidad();	//Evalua si la lista esta llena, si esa llena cambia el atributo de completo
 
 	~cLab();
