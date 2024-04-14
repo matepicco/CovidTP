@@ -23,23 +23,18 @@ void cLab::recibirMuestra(cPaciente* cPac)
 void cLab::muestraAnalisis()
 {
 	int contSintomas = 0;
-	for (int i = 0; i<5; i++)
-	{
-
-		if (ptrPac->getContEstrecho() == true)
-			contSintomas++;
-		if (ptrPac->getFiebre() == true)
-			contSintomas++;
-		if (ptrPac->getHeadhache() == true)
-			contSintomas++;
-		if (ptrPac->getMocos() == true)
-			contSintomas++;
-		if (ptrPac->getSorethroat() == true)
-			contSintomas++;
-		if (ptrPac->getTos() == true)
-			contSintomas++;
-	}
-
+	if (ptrPac->getContEstrecho() == true)
+		contSintomas++;
+	if (ptrPac->getFiebre() == true)
+		contSintomas++;
+	if (ptrPac->getHeadhache() == true)
+		contSintomas++;
+	if (ptrPac->getMocos() == true)
+		contSintomas++;
+	if (ptrPac->getSorethroat() == true)
+		contSintomas++;
+	if (ptrPac->getTos() == true)
+		contSintomas++;
 
 	if (contSintomas >= 2)
 		this->ptrPac->set_resultado(Positivo);
