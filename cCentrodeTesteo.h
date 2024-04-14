@@ -16,11 +16,13 @@ private:
 	cLab* ptrLab;
 
 public:
+	cCentrodeTesteo(const string CenterID, int ComunaTC, string NameTC);
+	~cCentrodeTesteo();
 	void setCompleteTC(bool Completo);
 	bool getCompleteTC();
-
+	//hacer metetodo disponible para cambiar el bool de completo
 	void asocLab(cLab* lab);
 	void altaPac(cPaciente* pacX);
-	bool sendTest();//podria ser que este metodo mande el paciente al laboratorio y el lab tenga un metodo random que defina el atributo de resultado de paciente
+	bool sendTest();//podria ser que este metodo mande el paciente al laboratorio y el paciente tenga un metodo random que defina el atributo de resultado de paciente
 	void bajaPac();
 };
