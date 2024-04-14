@@ -1,5 +1,14 @@
 #include "cLab.h"
 
+cLab::cLab(string labID, string labName, string labComuna)
+{
+	this->LabID = labID;
+	this->LabName = labName;
+	this->LabComuna = labComuna;
+	this->LabComplete = false;
+	this->ptrPac = nullptr;
+}
+
 void cLab::recibirMuestra(cPaciente* cPac)
 {
 	disponibilidad();
@@ -54,4 +63,12 @@ string cLab::getLabID()
 void cLab::setLabID(string labID)
 {
 	this->LabID = labID;
+}
+
+void cLab::bajaPac()
+{
+}
+
+cLab::~cLab()
+{
 }

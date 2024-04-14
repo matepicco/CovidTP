@@ -10,9 +10,9 @@ private:
 	string apellidoP;
 	string telP;
 	bool fiebre, tos, mocos, contEstrecho, headhache, sorethroat;
-	//enum TestResult;
 	TestResult Resultado;
 public:
+	cPaciente(const int dni, string NombreP, string ApellidoP, string TelP, bool Fiebre, bool Tos, bool Mocos, bool ContEstrecho, bool Headhache, bool Sorehtroat);
 	const int getDNI();
 	void set_resultado(TestResult resultado);
 
@@ -23,6 +23,7 @@ public:
 	bool getHeadhache();
 	bool getSorethroat();
 
-	string getTestResult();
+	TestResult getTestResult();
+	
 };
 

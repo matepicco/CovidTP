@@ -6,6 +6,7 @@ using namespace std;
 
 class cCentrodeTesteo
 {
+
 private:
 	const string centerID;
 	int comunaTC;
