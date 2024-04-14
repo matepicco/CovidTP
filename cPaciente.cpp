@@ -1,5 +1,19 @@
 #include "cPaciente.h"
 
+cPaciente::cPaciente(const int dni, string NombreP, string ApellidoP, string TelP, bool Fiebre, bool Tos, bool Mocos, bool ContEstrecho, bool Headhache, bool Sorehtroat): DNI(dni)
+{
+    this->nombreP = NombreP;
+    this->apellidoP = ApellidoP;
+    this->telP = TelP;
+    this->fiebre = Fiebre;
+    this->tos = Tos;
+    this->mocos = Mocos;
+    this->contEstrecho = ContEstrecho;
+    this->headhache = Headhache;
+    this->sorethroat = Sorehtroat;
+    this->Resultado = SinResultado;
+}
+
 const int cPaciente::getDNI()
 {
     return this->DNI;
