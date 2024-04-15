@@ -20,21 +20,38 @@ void cLab::recibirMuestra(cPaciente* cPac)
 	//Podriamos hacer un bloque try catch por si pasa algo con la muestra, no la recibe etc
 }
 
-void cLab::muestraAnalisis()
-{
-	int contSintomas = 0;
-	if (ptrPac->getContEstrecho() == true)
-		contSintomas++;
-	if (ptrPac->getFiebre() == true)
-		contSintomas++;
-	if (ptrPac->getHeadhache() == true)
-		contSintomas++;
-	if (ptrPac->getMocos() == true)
-		contSintomas++;
-	if (ptrPac->getSorethroat() == true)
-		contSintomas++;
-	if (ptrPac->getTos() == true)
-		contSintomas++;
+void cLab::muestraAnalisis(){
+
+int contSintomas = 0;
+
+for (int i = 1;i < 6;i++){
+		switch (i) {
+		case 1:
+			if (ptrPac->getContEstrecho() == true)
+				contSintomas++;
+			break;
+		case 2:
+			if (ptrPac->getFiebre() == true)
+				contSintomas++;
+			break;
+		case 3:
+			if (ptrPac->getHeadhache() == true)
+				contSintomas++;
+			break;
+		case 4:
+			if (ptrPac->getMocos() == true)
+			contSintomas++;
+			break;
+		case 5:
+			if (ptrPac->getSorethroat() == true)
+				contSintomas++;
+			break;
+		case 6:
+			if (ptrPac->getTos() == true)
+				contSintomas++;
+			break;
+		}
+	}
 
 	if (contSintomas >= 2)
 		this->ptrPac->set_resultado(Positivo);

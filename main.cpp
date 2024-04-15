@@ -4,6 +4,7 @@
 int main()
 {
 	cPaciente* pac1 = new cPaciente(23, "jose", "perez", "2324634", true, true, true, true, true, true);
+
 	cLab* Labo1 = new cLab("1234", "Cpvid", "6600");
 	cCentrodeTesteo* Centro1 = new cCentrodeTesteo("2324", 6600, "Swiss");
 
