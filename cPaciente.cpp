@@ -1,8 +1,26 @@
 #include "cPaciente.h"
 
+cPaciente::cPaciente(int dni, string NombreP, string ApellidoP, string TelP, bool Fiebre, bool Tos, bool Mocos, bool ContEstrecho, bool Headhache, bool Sorehtroat): DNI(dni)
+{
+    this->nombreP = NombreP;
+    this->apellidoP = ApellidoP;
+    this->telP = TelP;
+    this->fiebre = Fiebre;
+    this->tos = Tos;
+    this->mocos = Mocos;
+    this->contEstrecho = ContEstrecho;
+    this->headhache = Headhache;
+    this->sorethroat = Sorehtroat;
+}
+
 const int cPaciente::getDNI()
 {
     return this->DNI;
+}
+
+void cPaciente::set_resultado(TestResult resultado)
+{
+    this->Resultado = resultado;
 }
 
 bool cPaciente::getContEstrecho()
@@ -15,9 +33,9 @@ bool cPaciente::getHeadhache()
     return this->headhache;
 }
 
-bool cPaciente::getSorehtroat()
+bool cPaciente::getSorethroat()
 {
-    return this->sorehtroat;
+    return this->sorethroat;
 }
 
 bool cPaciente::getFiebre()
@@ -36,9 +54,8 @@ bool cPaciente::getMocos()
 }
 //getters de sintomas
 
-string cPaciente::getTestResult()
+TestResult cPaciente::getTestResult()
 {
-    //si mas de 2 getSintomaX son TRUE entonces retorna +Positivo
-    //si 0 -Negativo
-    // si no se hayan. Sin resultado
+    return this->Resultado;
+   //devuelve la info del resultado cambiado por el laboratorio una vez q el paciente paso por ahi
 }
